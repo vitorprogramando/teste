@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<title>FROTA</title>
+	<head>
+	
+	</head>
+	<body>
+		<div id="pdf2htmldiv">
+		<h1>Tabela de Frota</h1>
+		<table border="4">
+    <tr>
+        <a><th>Carro</th></a>
+        <th>Placa</th>
+        <th>Renavam</th>
+    </tr>
+    <tr>
+        <td>Ted</td>
+        <td>22</td>
+        <td>Estudante</td>
+    </tr>
+    <tr>
+        <td>Ralf</td>
+        <td>26</td>
+        <td>Designer</td>
+    </tr>
+	
+</table>
+		</div>
+		<br>
+		<br>
+<input type="button" onclick="printDiv('pdf2htmldiv')" value="Imprimir" />
+
+<script>
+	function printDiv(divName) {
+		var printContents = document.getElementById(divName).innerHTML;
+		var originalContents = document.body.innerHTML;
+
+		document.body.innerHTML = printContents;
+
+		window.print();
+
+		document.body.innerHTML = originalContents;
+	}
+</script>
+	
+	</body>
+</html>
